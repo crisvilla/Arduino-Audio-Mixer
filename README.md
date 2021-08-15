@@ -5,22 +5,22 @@ DS3231 link: https://github.com/rodan/ds3231
    * This code will demonstrate how |
    * how to control I2C audio chips |
    * TDA7319 and PT
-   *                                |
-   *   TX  1         - RAW          |     5V
-   *   RX  0         - GND          |     |
-   *   GND -         - RST          |     \
-   *   GND -         - VCC          |     /
-   *   enc 2        A3 N/A          |     \   4.7k
-   *   enc 3        A2 N/A          |     /
-   *   D4  4        A1 N/A          |     |     1uf/50v
-   *   D5  5        A0 <------------------0-----||-----< audio input
-   *   D6  6        13 N/A          |     |
-   *   D7  7        12 N/A          |     /
-   *   RS  8        11 N/A          |     \   4.7k
-   *   EN  9        10 N/A          |     /
-   *       A4 A5 A6 A7              |     \
-   *                                |     |
-   * -------------------------------|    Gnd
+   *                                |     5V
+   *   TX  1         - RAW          |     |                    do the same resistor netowrk for right channel and send to A2 of arduino, audio source from TDA7319 pin13.
+   *   RX  0         - GND          |     \
+   *   GND -         - RST          |     /
+   *   GND -         - VCC          |     \   4.7k
+   *   enc 2        A3 N/A          |     /
+   *   enc 3        A2 <---         |     |     1uf/50v
+   *   D4  4        A1 <------------------0-----||-----< L from TDA7319 pin8
+   *   D5  5        A0              |     |
+   *   D6  6        13 N/A          |     /
+   *   D7  7        12 N/A          |     \   4.7k
+   *   RS  8        11 N/A          |     /
+   *   EN  9        10 N/A          |     \
+   *       A4 A5 A6 A7              |     |
+   *                                |    Gnd
+   * -------------------------------|
    */
    SDA = A4             --------/\/\/\-----
    SCl = A5             |        10k      |
