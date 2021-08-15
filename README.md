@@ -1,6 +1,6 @@
 # Arduino-Audio-Mixer
 This project was an attempt to redesign my old audio mixer posted on Youtube having all the libraries required to run it. This is a free software and u can modify as long as u want
-DS3231 link: https://github.com/rodan/ds3231
+DS3231 link: https://github.com/tfg13/DS3231
   /*--------------------------------|
    * This code will demonstrate how |
    * how to control I2C audio chips |
